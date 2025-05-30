@@ -6,6 +6,14 @@ This project demonstrates how to convert a Figma design into a fully functional 
 **Project Name:** Figma WordPress Example  
 **Created:** May 30, 2025  
 **Purpose:** Educational demonstration of Figma-to-WordPress workflow  
+**Repository:** [https://github.com/adrazz-cyber/figma-wordpress-example](https://github.com/adrazz-cyber/figma-wordpress-example)
+
+### What This Demonstrates
+- Complete workflow from design analysis to theme deployment
+- Extracting design tokens (colors, typography) from Figma
+- Building WordPress themes with modern CSS and JavaScript
+- Using professional development tools and version control
+- Creating production-ready, responsive WordPress themes  
 
 ## 🛠️ Tools & Technologies Used
 
@@ -87,9 +95,9 @@ Based on the Figma design analysis:
 ```css
 /*
 Theme Name: Figma WordPress Example
-Theme URI: https://github.com/yourusername/figma-wordpress-example
-Author: Your Name
-Author URI: https://yourwebsite.com
+Theme URI: https://github.com/adrazz-cyber/figma-wordpress-example
+Author: Adam Berry
+Author URI: https://seoitright.co.uk
 Description: A WordPress theme built from Figma design
 Version: 1.0
 License: GPL v2 or later
@@ -168,10 +176,10 @@ figma-wordpress-example/
 ## 🚀 Deployment Process
 
 ### Via FTP (Using Windsurf's Built-in FTP)
-1. Connect to FTP server
+1. Connect to your FTP server using your hosting credentials
 2. Navigate to `/public_html/wp-content/themes/`
-3. Upload theme folder
-4. Activate theme in WordPress admin
+3. Upload the entire theme folder
+4. Activate theme in WordPress admin panel
 
 ### Via WordPress Admin
 1. Zip theme folder
