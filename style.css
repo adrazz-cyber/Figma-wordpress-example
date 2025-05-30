@@ -1,0 +1,59 @@
+/*
+Theme Name: Figma WordPress Example
+Theme URI: https://github.com/adrazz-cyber/figma-wordpress-example
+Author: Adam Berry
+Author URI: https://seoitright.co.uk
+Description: A demonstration WordPress theme built from Figma design showing the complete workflow from design to deployment
+Version: 1.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: figma-wp-example
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* ==========================================================================
+   Base Styles from Figma Design
+   ========================================================================== */
+
+:root {
+    /* Color Palette from Figma */
+    --color-primary-1: #8B5CF6;
+    --color-primary-2: #6366F1;
+    --color-dark: #1F2937;
+    --color-grey-1: #9CA3AF;
+    --color-white: #FFFFFF;
+    --color-text: #374151;
+    --color-black: #000000;
+    --color-background: #3C336F;
+    
+    /* Typography Scale */
+    --font-size-caption: 14px;
+    --font-size-paragraph: 24px;
+    --font-size-title: 28px;
+    
+    /* Spacing Scale (8px grid) */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: var(--font-size-paragraph);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-white);
+}
