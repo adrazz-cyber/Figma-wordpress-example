@@ -45,3 +45,14 @@ ehthumbs.db
 *.min.js
 dist/
 build/
+
+# Security - Never commit sensitive files
+*password*
+*ssh*
+*ftp*
+*.key
+*.pem
+wp-config*.php
+.env*
+*credential*
+*secret*

@@ -1,3 +1,0 @@
-@echo off
-echo Connecting to figma-to-wordpress.co.uk via SSH...
-"C:\Program Files\Git\bin\bash.exe" -c "ssh -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com"
