@@ -1,0 +1,3 @@
+@echo off
+echo Installing WordPress...
+"C:\Program Files\Git\usr\bin\ssh.exe" -i "C:\Users\adam\.ssh\id_ed25519_figma_wordpress" -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com "cd public_html && wget -q https://wordpress.org/latest.tar.gz && tar -xzf latest.tar.gz && mv wordpress/* . && mv wordpress/.* . 2>/dev/null && rm -rf wordpress latest.tar.gz && ls -la"

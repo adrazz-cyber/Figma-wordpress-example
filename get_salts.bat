@@ -1,0 +1,3 @@
+@echo off
+echo Generating WordPress salts and uploading config...
+"C:\Program Files\Git\usr\bin\ssh.exe" -i "C:\Users\adam\.ssh\id_ed25519_figma_wordpress" -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com "wget -q -O - https://api.wordpress.org/secret-key/1.1/salt/ > ~/salts.txt"

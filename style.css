@@ -1,59 +1,149 @@
 /*
-Theme Name: Figma WordPress Example
-Theme URI: https://github.com/adrazz-cyber/figma-wordpress-example
+Theme Name: Figma User Journey Map
+Description: WordPress theme built from Figma User Journey Map Template
+Version: 2.0
 Author: Adam Berry
-Author URI: https://seoitright.co.uk
-Description: A demonstration WordPress theme built from Figma design showing the complete workflow from design to deployment
-Version: 1.0
-License: GPL v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: figma-wp-example
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/* ==========================================================================
-   Base Styles from Figma Design
-   ========================================================================== */
-
-:root {
-    /* Color Palette from Figma */
-    --color-primary-1: #8B5CF6;
-    --color-primary-2: #6366F1;
-    --color-dark: #1F2937;
-    --color-grey-1: #9CA3AF;
-    --color-white: #FFFFFF;
-    --color-text: #374151;
-    --color-black: #000000;
-    --color-background: #3C336F;
-    
-    /* Typography Scale */
-    --font-size-caption: 14px;
-    --font-size-paragraph: 24px;
-    --font-size-title: 28px;
-    
-    /* Spacing Scale (8px grid) */
-    --space-xs: 8px;
-    --space-sm: 16px;
-    --space-md: 24px;
-    --space-lg: 32px;
-    --space-xl: 48px;
-    --space-xxl: 64px;
-}
-
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --color-primary: #6366F1;
+    --color-secondary: #8B5CF6;
+    --color-accent: #F59E0B;
+    --color-white: #FFFFFF;
+    --color-gray-100: #F3F4F6;
+    --color-gray-600: #4B5563;
+    --color-gray-900: #111827;
+    --bg-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --bg-card: #FFFFFF;
+    --bg-surface: #F8FAFC;
+    --space-4: 1rem;
+    --space-8: 2rem;
+    --space-16: 4rem;
+    --radius-xl: 1rem;
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    font-size: var(--font-size-paragraph);
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--color-text);
-    background-color: var(--color-white);
+    color: var(--color-gray-600);
+    background: var(--bg-surface);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-4);
+}
+
+.site-header {
+    background: var(--bg-primary);
+    color: white;
+    padding: var(--space-8) 0;
+    text-align: center;
+}
+
+.site-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: var(--space-4);
+}
+
+.site-description {
+    font-size: 1.25rem;
+    opacity: 0.9;
+    margin-bottom: var(--space-8);
+}
+
+.journey-map {
+    padding: var(--space-16) 0;
+}
+
+.journey-stages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-16);
+}
+
+.journey-stage {
+    background: var(--bg-card);
+    border-radius: var(--radius-xl);
+    padding: var(--space-8);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-stage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.journey-stage:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+}
+
+.stage-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: var(--space-4);
+}
+
+.stage-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-gray-900);
+}
+
+.stage-description {
+    color: var(--color-gray-600);
+    margin-bottom: 1.5rem;
+}
+
+.stage-actions {
+    list-style: none;
+}
+
+.stage-actions li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-gray-600);
+}
+
+.stage-actions li::before {
+    content: '→';
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-right: 0.5rem;
+}
+
+.site-footer {
+    background: var(--color-gray-900);
+    color: #D1D5DB;
+    padding: var(--space-16) 0 var(--space-8);
+    text-align: center;
 }

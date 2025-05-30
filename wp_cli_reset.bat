@@ -1,0 +1,3 @@
+@echo off
+echo Checking for wp-cli and resetting password...
+"C:\Program Files\Git\bin\bash.exe" -c "ssh -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com 'cd public_html && if command -v wp &> /dev/null; then wp user update 1 --user_pass=demo123; else echo \"wp-cli not found\"; fi'"

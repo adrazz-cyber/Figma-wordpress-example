@@ -1,0 +1,3 @@
+@echo off
+echo Resetting WordPress password...
+"C:\Program Files\Git\bin\bash.exe" -c "ssh -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com 'cd public_html && /usr/php74/usr/bin/php -r \"\\$mysqli = new mysqli(\\\"shareddb-y.hosting.stackcp.net\\\", \\\"figma-to-wordpress-3135396987\\\", \\\"byuov2vfum\\\", \\\"figma-to-wordpress-3135396987\\\"); \\$hash = md5(\\\"demo123\\\"); \\$mysqli->query(\\\"UPDATE wp_users SET user_pass = \\\\\\\"\\$hash\\\\\\\" WHERE user_login = \\\\\\\"figmademo\\\\\\\"\\\"); echo \\\"Password updated to: demo123\\\";\"'"

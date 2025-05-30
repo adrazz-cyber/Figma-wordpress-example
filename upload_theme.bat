@@ -1,0 +1,13 @@
+@echo off
+echo Uploading theme files to WordPress...
+
+echo Creating theme directory...
+"C:\Program Files\Git\bin\bash.exe" -c "ssh -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com 'mkdir -p public_html/wp-content/themes/figma-wordpress-example'"
+
+echo Uploading theme files...
+"C:\Program Files\Git\bin\bash.exe" -c "scp -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no -r C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/style.css C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/index.php C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/header.php C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/footer.php C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/functions.php C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/page.php figma-to-wordpress.co.uk@ssh.gb.stackcp.com:public_html/wp-content/themes/figma-wordpress-example/"
+
+echo Uploading assets directory...
+"C:\Program Files\Git\bin\bash.exe" -c "scp -i /c/Users/adam/.ssh/id_ed25519_figma_wordpress -o StrictHostKeyChecking=no -r C:/Users/adam/Documents/vibe-coding-projects/figma-wordpress-example/assets figma-to-wordpress.co.uk@ssh.gb.stackcp.com:public_html/wp-content/themes/figma-wordpress-example/"
+
+echo Done!

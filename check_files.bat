@@ -1,0 +1,2 @@
+@echo off
+"C:\Program Files\Git\usr\bin\ssh.exe" -i "C:\Users\adam\.ssh\id_ed25519_figma_wordpress" -o StrictHostKeyChecking=no figma-to-wordpress.co.uk@ssh.gb.stackcp.com "cd public_html && ls -la | head -20"

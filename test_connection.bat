@@ -1,0 +1,3 @@
+@echo off
+echo Testing SSH connection to figma-to-wordpress.co.uk...
+"C:\Program Files\Git\usr\bin\ssh.exe" -i "C:\Users\adam\.ssh\id_ed25519_figma_wordpress" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null figma-to-wordpress.co.uk@ssh.gb.stackcp.com "echo 'SSH connection successful!' && pwd && ls -la"

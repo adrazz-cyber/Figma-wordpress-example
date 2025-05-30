@@ -1,0 +1,3 @@
+@echo off
+echo Uploading wp-config.php...
+"C:\Program Files\Git\usr\bin\scp.exe" -i "C:\Users\adam\.ssh\id_ed25519_figma_wordpress" -o StrictHostKeyChecking=no wp-config-final.php figma-to-wordpress.co.uk@ssh.gb.stackcp.com:~/public_html/wp-config.php
